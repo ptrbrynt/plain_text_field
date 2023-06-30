@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:plain_text_field/src/platform_text_selection_controls.dart';
 
 class TextField extends EditableText {
   TextField({
@@ -35,7 +36,7 @@ class TextField extends EditableText {
     super.showCursor,
     super.showSelectionHandles = false,
     super.selectionColor,
-    super.selectionControls,
+    TextSelectionControls? selectionControls,
     super.keyboardType,
     super.textInputAction,
     super.textCapitalization = TextCapitalization.none,
@@ -76,5 +77,10 @@ class TextField extends EditableText {
     super.spellCheckConfiguration,
     super.magnifierConfiguration = TextMagnifierConfiguration.disabled,
     super.undoController,
-  });
+    bool selectionEnabled = true,
+  }) : super(
+          selectionControls: selectionEnabled
+              ? (selectionControls ?? platformTextSelectionControls)
+              : null,
+        );
 }
