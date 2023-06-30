@@ -1,39 +1,13 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Plain Text Field
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+**Currently in very early development.**
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+A simple `TextField` widget for Flutter which uses **neither** Material or Cupertino. In other words, an `EditableText` but with better defaults and more out-of-the-box functionality.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Motivation
 
-## Features
+Flutter's `EditableText` widget should be better. Out-of-the-box, there's no support for text selection and you *have* to provide a `TextEditingController`, `FocusNode`, `cursorColor` and `backgroundCursorColor`. 
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Flutter's Material library does provide a fully-featured `TextField` widget, but this might not be the best option for a lot of apps with very specific requirements around text field design.
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This package, therefore, aims to provide Flutter developers with a better, non-opinionated version of `EditableText` which can be used as the basis for custom text field designs without resorting to Material or Cupertino libaries.
